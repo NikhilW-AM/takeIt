@@ -1,0 +1,54 @@
+<div class="one">
+  <div class="center">
+    <div class="title">
+      <h2>Register</h2>
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+    {{registrationForm.value | json}}
+    {{registrationForm.status}}
+      <div class="form-outline  mb-2">
+        <input type="text" id="registerName" class="form-control" formControlName='givenName'/>
+        <label class="form-label" for="registerName">First name</label>
+      </div>
+      <div class="form-outline mb-2">
+        <input type="text" id="registerName" class="form-control" formControlName='familyName'/>
+        <label class="form-label" for="registerName">Last name</label>
+      </div>
+
+
+      <!-- Email input -->
+      <div class="form-outline mb-2">
+        <input type="email" id="registerEmail" class="form-control" formControlName='email'/>
+        <label class="form-label" for="registerEmail">Email</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-2">
+        <input type="password" id="registerPassword" class="form-control" formControlName='password'/>
+        <label class="form-label" for="registerPassword">Password</label>
+      </div>
+      <!-- Repeat Password input -->
+      <div class="form-outline ">
+        <input type="password" id="registerRepeatPassword" class="form-control" formControlName="confirmPassword">
+        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+      </div>
+      {{repeatPassword}}
+      <!-- Checkbox -->
+      <div class="form-check  justify-content-center ">
+        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+          aria-describedby="registerCheckHelpText" />
+        <label class="form-check-label" for="registerCheck">
+          I have read and agree to the terms
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit"  class="btn btn-primary btn-block mt-3">Sign in</button>
+    </form>
+
+  </div>
+
+
+
+</div>
+
